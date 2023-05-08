@@ -15,6 +15,11 @@ hr {
     width: 250px;
 }
 
+.weather-search {
+    display: flex;
+    justify-content: space-around;
+}
+
 .city-weather {
     display: flex;
     flex-direction: column;
@@ -25,7 +30,15 @@ hr {
     width: 100px;
 }
 
-.city-buttons {
+
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/*.city-forecast {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -33,17 +46,14 @@ hr {
     width: 250px;
     
    
-}
+}*/
 
-.weather-search {
-    display: flex;
-    justify-content: space-around;
-}
+
 
 .box-1 {
    background-color: blue;
    width: 100px;
-   height: 80px;
+   height: 100px;
 }
 
 .box-2 {
@@ -72,7 +82,10 @@ hr {
 
 .weather-box {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: auto;
+    padding: auto;
     
    
 }

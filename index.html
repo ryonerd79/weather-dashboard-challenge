@@ -12,10 +12,11 @@
 </head>
 
 <body>
-  <header>
-    <h1>Weather Dashboard</h1>
-  </header>
-  <div>
+  <div class="flex-container">
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+
     <div class="weather-search">
       <div>
         <h2>Search for a city:</h2>
@@ -26,17 +27,26 @@
       <div class="city-weather col-md-6">
       </div>
     </div>
-    <div class="weather-box">
+    <div>
+    <div class="row col-sm-3">
+      <button>Denver</button>
+      <button>Atlanta</button>
+      <button>San Francisco</button>
+      <button>Los Angeles</button>
+      <button>Austin</button>
+      <button>Pittsburgh</button>
+      <button>New York</button>
+      <button>Chicago</button>
+    </div>
+    <div class="col-md-6">
       <div class="box-1"></div>
       <div class="box-2"></div>
       <div class="box-3"></div>
       <div class="box-4"></div>
       <div class="box-5"></div>
     </div>
-
-
-    <div class="row">
-      <div class="city-buttons col-sm-3">
+    </div>
+      <!--<div class="city-forecast col-sm-3">
         <button>Denver</button>
         <button>Atlanta</button>
         <button>San Francisco</button>
@@ -45,16 +55,21 @@
         <button>Pittsburgh</button>
         <button>New York</button>
         <button>Chicago</button>
-      </div>
+        </div>
+        <div class="forecast-box">
+          <div class="box-1"></div>
+          <div class="box-2"></div>
+          <div class="box-3"></div>
+          <div class="box-4"></div>
+          <div class="box-5"></div>
+        </div>
+      </div>-->
 
 
-
-    </div>
+    
+  </div>
   </div>
 
-
-
-  <div></div>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
     integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
