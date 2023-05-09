@@ -5,6 +5,7 @@ const cityWeather = document.querySelector('.city-weather');
   var rightNow = dayjs().format('MMM DD, YYYY');
   $('#currentDay').text(rightNow);
   console.log(rightNow);
+  
 
 searchButton.addEventListener("click", function() {
     var city = weatherInput.value
@@ -15,9 +16,15 @@ searchButton.addEventListener("click", function() {
     })
     .then(function (data) {
       var cityName = data.city.name
+      var temp = data.list[0].main.temp;
+      var wind = data.list[0].main.wind;
+      var humidity = data.list[0].main.humidity;
       console.log(data);//Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
      <h1>${cityName}</h1>
+     <p>${temp}</p>
+     <p>${wind}</p>
+     <p>${humidity}</p>
      ` 
     });
 });
