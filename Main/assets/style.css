@@ -60,30 +60,30 @@ hr {
 
 .box-1 {
    background-color: blue;
-   width: 200px;
-   height: 400px;
+   width: 20px;
+   height: 15px;
 }
 
 .box-2 {
-     background-color: brown;
+     background-color: blue;
      width: 200px;
      height: 400px;
 }
 
 .box-3 {
-     background-color: red;
+     background-color: blue;
      width: 200px;
      height: 400px;
 } 
 
 .box-4 {
-    background-color: green;
+    background-color: blue;
     width: 200px;
     height: 400px;
 }
 
 .box-5 {
-    background-color: gray;
+    background-color: blue;
     width: 200px;
     height: 400px;
 }
