@@ -17,23 +17,24 @@ hr {
 
 .weather-search {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .city-weather {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: white;
     border: 1px solid black;
     color: black;
     padding: 20px;
     width: 400px;
+    height: 250px;
 }      
 
 .weather-row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 20px;
    
     
@@ -50,7 +51,7 @@ hr {
     justify-content: space-around;
     flex-direction: column;
     height: 360px;
-    width: 250px;
+    width: 260px;
     
    
 }
