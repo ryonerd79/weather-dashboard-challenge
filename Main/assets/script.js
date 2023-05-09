@@ -4,6 +4,7 @@ var weatherInput =  document.querySelector("#input");
 const cityWeather = document.querySelector('.city-weather');
   var rightNow = dayjs().format('MMM DD, YYYY');
   $('#currentDay').text(rightNow);
+  console.log(rightNow);
 
 searchButton.addEventListener("click", function() {
     var city = weatherInput.value
