@@ -17,13 +17,13 @@ hr {
 
 .weather-search {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .city-weather {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     background-color: white;
     border: 1px solid black;
     color: black;

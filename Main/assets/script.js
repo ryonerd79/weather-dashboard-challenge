@@ -17,7 +17,8 @@ searchButton.addEventListener("click", function() {
     .then(function (data) {
       var cityName = data.city.name
       var temp = data.list[0].main.temp;
-      var wind = data.list[0].main.wind;
+      var wind = data.list[0].wind;
+      console.log(wind)
       var humidity = data.list[0].main.humidity;
       console.log(data);//Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
