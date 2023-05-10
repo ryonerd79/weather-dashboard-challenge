@@ -34,8 +34,9 @@ hr {
 
 .weather-row {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
+    
    
     
 
@@ -60,33 +61,13 @@ hr {
 
 .box-1 {
    background-color: blue;
-   width: 20px;
-   height: 15px;
+   width: 180px;
+   height: 200px;
+   margin: 30px;
+  
+   
 }
 
-.box-2 {
-     background-color: blue;
-     width: 200px;
-     height: 400px;
-}
-
-.box-3 {
-     background-color: blue;
-     width: 200px;
-     height: 400px;
-} 
-
-.box-4 {
-    background-color: blue;
-    width: 200px;
-    height: 400px;
-}
-
-.box-5 {
-    background-color: blue;
-    width: 200px;
-    height: 400px;
-}
 
 /*.weather-box {
     display: flex;
