@@ -32,7 +32,7 @@ searchButton.addEventListener("click", function() {
     });
 });
 
-  cityButton.addEventListener("click", function() {
+  searchButton.addEventListener("click", function() {
   var city = cityWeather.value
   var url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=" + WeatherKy;
   fetch(url)
