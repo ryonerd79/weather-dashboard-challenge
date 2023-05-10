@@ -41,13 +41,13 @@ searchButton.addEventListener("click", function () {
       return response.json();
     })
     .then( function (data) {
-    for (let i = 0; i < forecast.length; i++) {
+    for (let i = 0; i < 40; i += 8) {
 
     var cityName = data.city.name;
-    var weatherIcon = data.list[8].weather[8].icon;
-    var temp = data.list[8].main.temp;
-    var wind = data.list[8].wind.speed;
-    var humidity = data.list[8].main.humidity;
+    var weatherIcon = data.list[0].weather[0].icon;
+    var temp = data.list[0].main.temp;
+    var wind = data.list[0].wind.speed;
+    var humidity = data.list[0].main.humidity;
 
     var card = document.createElement('div');
     var tempEl = document.createElement('p');
