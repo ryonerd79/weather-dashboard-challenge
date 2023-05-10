@@ -23,7 +23,7 @@ searchButton.addEventListener("click", function() {
       var humidity = data.list[0].main.humidity;
      //Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
-     <h1>${cityName} ${rightNow}</h1>
+     <h1>${cityName} (${rightNow})</h1>
      <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
      <p>Temp: ${temp}</p>
      <p>Wind: ${wind}</p>
