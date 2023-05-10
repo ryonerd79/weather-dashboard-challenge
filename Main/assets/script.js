@@ -15,16 +15,18 @@ searchButton.addEventListener("click", function() {
       return response.json();
     })
     .then(function (data) {
-      var cityName = data.city.name
+      var cityName = data.city.name;
+      console.log(data)
+      var weatherIcon = data.list[0].weather.icon;
       var temp = data.list[0].main.temp;
       var wind = data.list[0].wind.speed;
       var humidity = data.list[0].main.humidity;
      //Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
-     <h1>${cityName}</h1>
-     <p>${temp}</p>
-     <p>${wind}</p>
-     <p>${humidity}</p>
+     <h1>${cityName} ${rightNow} ${weatherIcon}</h1>
+     <p>Temp: ${temp}</p>
+     <p>Wind: ${wind}</p>
+     <p>Humidity: ${humidity}</p>
      ` 
     });
 });
