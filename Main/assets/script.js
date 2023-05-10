@@ -21,6 +21,7 @@ searchButton.addEventListener("click", function() {
       var temp = data.list[0].main.temp;
       var wind = data.list[0].wind.speed;
       var humidity = data.list[0].main.humidity;
+
      //Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
      <h1>${cityName} (${rightNow})</h1>
@@ -33,7 +34,7 @@ searchButton.addEventListener("click", function() {
 });
 
   searchButton.addEventListener("click", function() {
-  var city = cityWeather.value
+  var city = weatherInput.value
   var url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=" + WeatherKy;
   fetch(url)
   .then(function (response) {
