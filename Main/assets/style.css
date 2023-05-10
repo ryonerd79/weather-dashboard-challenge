@@ -32,7 +32,7 @@ hr {
     height: 250px;
 }      
 
-.weather-row {
+#weather-row {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -68,15 +68,3 @@ hr {
   
    
 }
-
-
-/*.weather-box {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    margin: auto;
-    padding: auto;
-    gap: 20px;
-    
-   
-}*/

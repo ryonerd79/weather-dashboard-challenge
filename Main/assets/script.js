@@ -1,18 +1,18 @@
 var WeatherKy = "81579ebbf941cb5a0a56ea078ca19e47"
 var searchButton = document.querySelector("#search-button");
 var cityButton = document.querySelector("#city-button");
-var weatherRow = document.querySelectorAll(".box-1")
-var weatherInput =  document.querySelector("#input");
+var fiveDayRow = document.querySelector('#weather-row')
+var weatherInput = document.querySelector("#input");
 const cityWeather = document.querySelector('.city-weather');
-  var rightNow = dayjs().format('MMM DD, YYYY');
-  $('#currentDay').text(rightNow);
- 
-  
+var rightNow = dayjs().format('MMM DD, YYYY');
+$('#currentDay').text(rightNow);
 
-searchButton.addEventListener("click", function() {
-    var city = weatherInput.value
-    var url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=" + WeatherKy;
-    fetch(url)
+
+
+searchButton.addEventListener("click", function () {
+  var city = weatherInput.value
+  var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + WeatherKy;
+  fetch(url)
     .then(function (response) {
       return response.json();
     })
@@ -22,35 +22,41 @@ searchButton.addEventListener("click", function() {
       var temp = data.list[0].main.temp;
       var wind = data.list[0].wind.speed;
       var humidity = data.list[0].main.humidity;
-     cityWeather.innerHTML = `
+      console.log(data)
+      cityWeather.innerHTML = `
      <h1>${cityName} (${rightNow})</h1>
      <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
      <p>Temp: ${temp}</p>
      <p>Wind: ${wind}</p>
      <p>Humidity: ${humidity}</p>
-     ` 
+     `
     });
 });
 
-  searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function () {
   var city = weatherInput.value
-  var url = "https://api.openweathermap.org/data/2.5/forecast?q="+ city +"&appid=" + WeatherKy;
+  var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + WeatherKy;
   fetch(url)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
+    .then(function (response) {
+      return response.json();
+    })
+    .then( function (data) {
+    for (let i = 0; i < forecast.length; i++) {
+
     var cityName = data.city.name;
     var weatherIcon = data.list[8].weather[8].icon;
     var temp = data.list[8].main.temp;
     var wind = data.list[8].wind.speed;
     var humidity = data.list[8].main.humidity;
-   weatherRow.innerHTML = `
-   <h1>${cityName} ${rightNow}</h1>
-   <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
-   <p>Temp: ${temp}</p>
-   <p>Wind: ${wind}</p>
-   <p>Humidity: ${humidity}</p>
-   ` 
-  });
-});
+
+    var card = document.createElement('div');
+    var tempEl = document.createElement('p');
+
+    card.append(tempEl);
+
+    tempEl.textcontent = `Temp: ${temp}`;
+
+    fiveDayRow.append(card);
+  }
+})
+})
