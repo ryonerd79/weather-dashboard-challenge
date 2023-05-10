@@ -1,6 +1,7 @@
 var WeatherKy = "81579ebbf941cb5a0a56ea078ca19e47"
 var searchButton = document.querySelector("#search-button");
 var cityButton = document.querySelector("#city-button");
+var weatherRow = document.querySelectorAll(".box-1")
 var weatherInput =  document.querySelector("#input");
 const cityWeather = document.querySelector('.city-weather');
   var rightNow = dayjs().format('MMM DD, YYYY');
@@ -21,8 +22,6 @@ searchButton.addEventListener("click", function() {
       var temp = data.list[0].main.temp;
       var wind = data.list[0].wind.speed;
       var humidity = data.list[0].main.humidity;
-
-     //Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
      <h1>${cityName} (${rightNow})</h1>
      <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
@@ -46,7 +45,7 @@ searchButton.addEventListener("click", function() {
     var temp = data.list[8].main.temp;
     var wind = data.list[8].wind.speed;
     var humidity = data.list[8].main.humidity;
-   cityWeather.innerHTML = `
+   weatherRow.innerHTML = `
    <h1>${cityName} ${rightNow}</h1>
    <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
    <p>Temp: ${temp}</p>
