@@ -17,13 +17,14 @@ searchButton.addEventListener("click", function() {
     .then(function (data) {
       var cityName = data.city.name;
       console.log(data)
-      var weatherIcon = data.list[0].weather.icon;
+      var weatherIcon = data.list[0].weather[0].icon;
       var temp = data.list[0].main.temp;
       var wind = data.list[0].wind.speed;
       var humidity = data.list[0].main.humidity;
      //Loop over the data to generate a table, each table row will have a link to the repo url
      cityWeather.innerHTML = `
-     <h1>${cityName} ${rightNow} ${weatherIcon}</h1>
+     <h1>${cityName} ${rightNow}</h1>
+     <img src="https://openweathermap.org/img/w/${weatherIcon}.png" height="40" width="40">
      <p>Temp: ${temp}</p>
      <p>Wind: ${wind}</p>
      <p>Humidity: ${humidity}</p>
