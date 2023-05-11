@@ -6,13 +6,16 @@ var weatherInput = document.querySelector("#input");
 const cityWeather = document.querySelector('.city-weather');
 var rightNow = dayjs().format('MMM DD, YYYY');
 $('#currentDay').text(rightNow);
+var cityArray = []
 
 
 
 
-searchButton.addEventListener("click", function () {
+function getWeather() {
   fiveDayRow.innerHTML = ``
   var city = weatherInput.value
+  cityArray.push(city)
+  localStorage.setItem('cities', cityArray)
   var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + WeatherKy;
   fetch(url)
     .then(function (response) {
@@ -34,7 +37,10 @@ searchButton.addEventListener("click", function () {
      `
      localStorage.getItem(data);
     });
-});
+};
+
+searchButton.addEventListener("click", getWeather)
+
 var cityButtons = document.querySelectorAll('#city-button')
 for (let i = 0; i < cityButtons.length; i++) {
   cityButtons[i].addEventListener("click", function(event){
@@ -60,6 +66,7 @@ for (let i = 0; i < cityButtons.length; i++) {
        `
        localStorage.getItem(data);
       });
+    
       var url2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + WeatherKy;
       fetch(url2)
         .then(function (response) {
