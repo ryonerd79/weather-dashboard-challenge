@@ -5,7 +5,7 @@ This weekly challenge is a weather dashboard. This project help practice in usin
 
 ## Screenshot
 
-![Screenshot(81)]
+![Screenshot(81)](C:\Users\danny\bootcamp\weather-dashboard-challenge\Main\02-Challenge\Assets\06-server-side-apis-homework-demo.png)
 
 ## Links
 
