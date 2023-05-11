@@ -67,8 +67,6 @@ for (let i = 0; i < cityButtons.length; i++) {
         })
         .then(function (data) {
         for (let i = 0; i < 33; i += 8) {
-        
-    
         var weatherIcon = data.list[i].weather[0].icon;
         var date = data.list[i].dt_txt  
         var temp = data.list[i].main.temp;
